@@ -15,8 +15,17 @@ function pluck(array, propiedad) {
 
   // Tu código acá:
 
+  //return array.map(objeto => objeto[propiedad]);
+ var arr = []
+  for (var o of array){
+    if (o.hasOwnProperty(propiedad)){
+      arr.push(o[propiedad])
+    }
+  }
+  return arr 
 }
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = pluck
+
